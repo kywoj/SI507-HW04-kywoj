@@ -1,6 +1,6 @@
 import random
 
-answer = input("What is your question?")
+answer = ""
 
 possible_responses = random.choice(["It is certain", "It is decidedly so",
 "Without a doubt", "Yes definitely", "You may rely on it",
@@ -9,3 +9,12 @@ possible_responses = random.choice(["It is certain", "It is decidedly so",
 "Ask again later", "Better not tell you now", "Cannot predict now",
 "Concentrate and ask again" ,"Don't count on it", "My reply is no",
 "My sources say no", "Outlook not so good", "Very doubtful"])
+
+while answer != "quit":
+	answer = input("What is your question?")
+	if answer == "quit":
+		break
+	elif answer[-1] == "?":
+		print(possible_responses)
+	else:
+		print("I'm sorry, I can only answer questions.")
